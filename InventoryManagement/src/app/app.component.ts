@@ -2,10 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {PrimeNG} from 'primeng/config';
 import {FilterMatchMode} from 'primeng/api';
+import {MenuBarComponent} from './components/menu-bar/menu-bar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, MenuBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

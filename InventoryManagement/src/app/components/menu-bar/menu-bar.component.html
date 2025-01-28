@@ -1,7 +1,6 @@
 <div class="navigation-bar">
-  <!-- Logo, Menu, User Actions -->
-  <div class="logo">
-    <img ngSrc="./app/assets/logo/logo.svg" alt="Logo" width="20" height="20" priority />
+  <div class="side-bar">
+    <app-side-bar></app-side-bar>
   </div>
   <p-menubar [model]="items" class="main-menu"></p-menubar>
   <div class="user-actions">
@@ -15,5 +14,3 @@
   </div>
 </div>
 
-<!-- Breadcrumb -->
-<app-breadcrumb [breadcrumbItems]="breadcrumbItems"></app-breadcrumb>

@@ -1,22 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 import {Menubar} from 'primeng/menubar';
-import {Ripple} from 'primeng/ripple';
-import {Badge, BadgeDirective} from 'primeng/badge';
-import {NgClass, NgIf, NgOptimizedImage} from '@angular/common';
-import {Avatar} from 'primeng/avatar';
-import {InputText} from 'primeng/inputtext';
+import {NgOptimizedImage} from '@angular/common';
 import {MenuItem} from 'primeng/api';
-import {BreadcrumbComponent} from '../breadcrumb/breadcrumb.component';
 import {OverlayBadge} from 'primeng/overlaybadge';
+import {SideBarComponent} from '../side-bar/side-bar.component';
 
 @Component({
   selector: 'app-menu-bar',
   imports: [
     Menubar,
-    BreadcrumbComponent,
     NgOptimizedImage,
-    BadgeDirective,
-    OverlayBadge
+    OverlayBadge,
+    SideBarComponent
   ],
   templateUrl: './menu-bar.component.html',
   styleUrl: './menu-bar.component.css'
@@ -24,12 +19,6 @@ import {OverlayBadge} from 'primeng/overlaybadge';
 export class MenuBarComponent implements OnInit{
 
   items: MenuItem[] = [];
-
-  breadcrumbItems = [
-    { label: 'Level 3', url: '/' },
-    { label: 'Level 2', url: '/' },
-    { label: 'Level 1', url: '/' }
-  ];
 
   ngOnInit() {
     this.items = [
