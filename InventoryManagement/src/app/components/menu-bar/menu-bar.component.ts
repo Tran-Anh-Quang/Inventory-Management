@@ -1,17 +1,19 @@
 import {Component, OnInit} from '@angular/core';
 import {Menubar} from 'primeng/menubar';
-import {NgOptimizedImage} from '@angular/common';
 import {MenuItem} from 'primeng/api';
 import {OverlayBadge} from 'primeng/overlaybadge';
-import {SideBarComponent} from '../side-bar/side-bar.component';
+import {SideBarComponent} from './side-bar/side-bar.component';
+import {Avatar} from 'primeng/avatar';
+import {Menu} from 'primeng/menu';
 
 @Component({
   selector: 'app-menu-bar',
   imports: [
     Menubar,
-    NgOptimizedImage,
     OverlayBadge,
-    SideBarComponent
+    SideBarComponent,
+    Avatar,
+    Menu
   ],
   templateUrl: './menu-bar.component.html',
   styleUrl: './menu-bar.component.css'
@@ -19,6 +21,55 @@ import {SideBarComponent} from '../side-bar/side-bar.component';
 export class MenuBarComponent implements OnInit{
 
   items: MenuItem[] = [];
+
+  menuItems = [
+    {
+      items: [
+        {
+          label: 'Trần Anh Quang',
+          icon: 'pi pi-user',
+          styleClass: 'font-semibold text-lg',
+          escape: false
+        },
+        {
+          label: 'dinosaurous9x@gmail.com',
+          icon: 'pi pi-envelope',
+          styleClass: 'text-sm text-500'
+        }
+      ]
+    },
+    {
+      separator: true
+    },
+    {
+      items: [
+        { label: 'Account settings', icon: 'pi pi-cog' },
+        { label: 'Payment methods', icon: 'pi pi-credit-card' },
+        { label: 'Purchase history', icon: 'pi pi-calendar' }
+      ]
+    },
+    {
+      separator: true
+    },
+    {
+      items: [
+        {
+          label: 'Language',
+          icon: 'pi pi-globe',
+          escape: false,
+        }
+      ]
+    },
+    {
+      separator: true
+    },
+    {
+      items: [
+        { label: 'Logout', icon: 'pi pi-sign-in' },
+      ]
+    }
+  ];
+
 
   ngOnInit() {
     this.items = [

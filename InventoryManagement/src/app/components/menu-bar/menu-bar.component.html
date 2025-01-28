@@ -10,7 +10,12 @@
     <p-overlayBadge value="2" badgeSize="small">
       <i class="pi pi-bell text"></i>
     </p-overlayBadge>
-    <img ngSrc="../src/app/assets/avatar.png" alt="User Avatar" width="20" height="20" priority class="user-avatar" />
+    <p-avatar (click)="menu.toggle($event)" icon="pi pi-user" class="avatar mr-2 cursor-pointer" size="normal" shape="circle"/>
+    <p-menu #menu
+            [model]="menuItems"
+            [popup]="true"
+            [styleClass]="'user-custom-menu'">
+    </p-menu>
   </div>
 </div>
 

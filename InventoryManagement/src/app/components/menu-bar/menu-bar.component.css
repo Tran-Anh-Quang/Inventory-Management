@@ -8,19 +8,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo Section */
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.logo img {
-  height: 40px;
-  margin-right: 10px;
-}
-
 /* Main Menu Styles */
 .main-menu {
   flex: 1;
@@ -39,18 +26,27 @@
   cursor: pointer;
 }
 
-.user-avatar {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  cursor: pointer;
+.avatar {
+  background-color: rgba(34, 224, 159, 0.98);
 }
 
-/* Breadcrumb Styles */
-.breadcrumbs {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.user-actions p-overlayBadge {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
 }
+
+.user-actions p-overlayBadge:hover {
+  background-color: #e8e0e0;
+}
+
+.user-actions .avatar {
+  transition: background-color 0.3s ease;
+}
+
+.user-actions .avatar:hover {
+  background-color: #e8e0e0;
+}
+
+
