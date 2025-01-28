@@ -1,0 +1,20 @@
+p-breadcrumb {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+p-breadcrumb .ui-breadcrumb-item {
+  margin-right: 5px;
+}
+
+p-breadcrumb .ui-breadcrumb-chevron {
+  margin: 0 5px;
+  color: #a0aec0;
+}
+
+
+
+
+
+

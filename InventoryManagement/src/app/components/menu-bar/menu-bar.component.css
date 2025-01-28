@@ -1,0 +1,56 @@
+/* Navigation Bar Styles */
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Main Menu Styles */
+.main-menu {
+  flex: 1;
+  margin: 0 20px;
+}
+
+/* User Actions */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-actions i {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.user-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Breadcrumb Styles */
+.breadcrumbs {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
