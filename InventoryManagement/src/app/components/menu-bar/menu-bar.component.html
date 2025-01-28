@@ -1,12 +1,16 @@
 <div class="navigation-bar">
   <!-- Logo, Menu, User Actions -->
   <div class="logo">
-    <img ngSrc="src/app/assets/logo/logo.svg" alt="Logo" width="20" height="20" priority />
+    <img ngSrc="./app/assets/logo/logo.svg" alt="Logo" width="20" height="20" priority />
   </div>
   <p-menubar [model]="items" class="main-menu"></p-menubar>
   <div class="user-actions">
-    <i class="pi pi-inbox"></i>
-    <i class="pi pi-bell"></i>
+    <p-overlayBadge value="3" badgeSize="small">
+      <i class="pi pi-inbox"></i>
+    </p-overlayBadge>
+    <p-overlayBadge value="2" badgeSize="small">
+      <i class="pi pi-bell text"></i>
+    </p-overlayBadge>
     <img ngSrc="../src/app/assets/avatar.png" alt="User Avatar" width="20" height="20" priority class="user-avatar" />
   </div>
 </div>

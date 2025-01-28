@@ -1,19 +1,22 @@
 import {Component, OnInit} from '@angular/core';
 import {Menubar} from 'primeng/menubar';
 import {Ripple} from 'primeng/ripple';
-import {Badge} from 'primeng/badge';
+import {Badge, BadgeDirective} from 'primeng/badge';
 import {NgClass, NgIf, NgOptimizedImage} from '@angular/common';
 import {Avatar} from 'primeng/avatar';
 import {InputText} from 'primeng/inputtext';
 import {MenuItem} from 'primeng/api';
 import {BreadcrumbComponent} from '../breadcrumb/breadcrumb.component';
+import {OverlayBadge} from 'primeng/overlaybadge';
 
 @Component({
   selector: 'app-menu-bar',
   imports: [
     Menubar,
     BreadcrumbComponent,
-    NgOptimizedImage
+    NgOptimizedImage,
+    BadgeDirective,
+    OverlayBadge
   ],
   templateUrl: './menu-bar.component.html',
   styleUrl: './menu-bar.component.css'
