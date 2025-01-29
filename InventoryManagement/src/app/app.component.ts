@@ -8,7 +8,7 @@ import {MenuBarComponent} from './components/menu-bar/menu-bar.component';
   selector: 'app-root',
   imports: [RouterOutlet, MenuBarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
   title = 'InventoryManagement';

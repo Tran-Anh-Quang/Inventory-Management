@@ -1,0 +1,34 @@
+<div class="content">
+  <app-header title="Category" subtitle="Categories"></app-header>
+  <p-card class="m-2">
+    <p-table [value]="categories" [tableStyle]="{'min-width': '60rem'}">
+      <ng-template #header>
+        <tr>
+          <th style="width: 4rem"><p-tableHeaderCheckbox /></th>
+          <th pSortableColumn="category-name" style="width:30%">
+            Name <p-sortIcon field="category-name" />
+          </th>
+          <th style="width:30%">
+            Image
+          </th>
+          <th style="width:30%">
+            Action
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template #body let-category>
+        @for (category of categories; track $index) {
+          <tr>
+            <td>
+              <p-tableCheckbox [value]="category" />
+            </td>
+            <td>{{ category.categoryName }}</td>
+            <td>{{ category.categoryImage }}</td>
+          </tr>
+        }
+      </ng-template>
+    </p-table>
+
+  </p-card>
+
+</div>
