@@ -76,10 +76,10 @@ export class MenuBarComponent implements OnInit{
       { label: 'Dashboard', icon: 'pi pi-home', routerLink: '/' },
       {
         label: 'Customers',
-        icon: 'pi pi-users',
+        icon: 'pi pi-user',
         items: [
           { label: 'Add Customer', icon: 'pi pi-user-plus', routerLink: '/add-customer' },
-          { label: 'Manage Customers', icon: 'pi pi-user-edit', routerLink: '/manage-customers' }
+          { label: 'Manage Customers', icon: 'pi pi-users', routerLink: '/manage-customers' }
         ]
       },
       { label: 'Calendar', icon: 'pi pi-calendar', routerLink: '/calendar' },
