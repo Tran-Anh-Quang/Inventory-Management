@@ -1,7 +1,7 @@
 <div class="content">
   <app-header title="Category" subtitle="Categories"></app-header>
   <p-card>
-    <p-table [value]="categories" [tableStyle]="{'min-width': '60rem'}">
+    <p-table [value]="pagedCategories" [tableStyle]="{'min-width': '60rem'}">
       <ng-template #header>
         <tr>
           <th style="width: 4rem"><p-tableHeaderCheckbox /></th>
@@ -50,5 +50,11 @@
         }
       </ng-template>
     </p-table>
+    <app-paginator
+      [first]="first"
+      [rows]="rows"
+      [totalRecords]="totalRecords"
+      (pageChange)="onPageChange($event)"
+    ></app-paginator>
   </p-card>
 </div>
