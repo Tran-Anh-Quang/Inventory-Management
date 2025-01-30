@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import {PrimeNG} from 'primeng/config';
 import {FilterMatchMode} from 'primeng/api';
 import {MenuBarComponent} from './components/menu-bar/menu-bar.component';
+import {Toast} from 'primeng/toast';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MenuBarComponent],
+  imports: [RouterOutlet, MenuBarComponent, Toast],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

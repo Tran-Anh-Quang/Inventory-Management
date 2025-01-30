@@ -1,0 +1,7 @@
+<p-toast [style]="{ 'margin-bottom': '80px' }" [baseZIndex]="500" [autoZIndex]="false">
+  <ng-template let-message pTemplate="message">
+    <div class="toast-message">
+      {{ message.summary }}
+    </div>
+  </ng-template>
+</p-toast>

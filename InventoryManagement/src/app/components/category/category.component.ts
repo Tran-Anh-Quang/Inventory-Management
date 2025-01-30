@@ -10,6 +10,7 @@ import {Dialog} from 'primeng/dialog';
 import {InputText} from 'primeng/inputtext';
 import {ToggleSwitch} from 'primeng/toggleswitch';
 import {FormsModule} from '@angular/forms';
+import {ToastService} from '../../service/toast.service';
 
 @Component({
   selector: 'app-category',
@@ -39,7 +40,9 @@ export class CategoryComponent implements OnInit{
   visible: boolean = false;
   statusChecked: boolean = false;
 
-  constructor(private readonly categoriesService: CategoryService) {
+  constructor(
+    private readonly categoriesService: CategoryService,
+    private readonly toastService: ToastService){
   }
 
   ngOnInit() {
@@ -73,6 +76,22 @@ export class CategoryComponent implements OnInit{
 
   showDialog() {
     this.visible = true;
+  }
+
+  showSuccessToast() {
+    this.toastService.showSuccess('Action completed!');
+  }
+
+  showErrorToast() {
+    this.toastService.showError('Error occurred!');
+  }
+
+  showWarningToast() {
+    this.toastService.showWarning('Please check again!');
+  }
+
+  refreshCategories(): void {
+    this.fetchCategories();
   }
 
 }

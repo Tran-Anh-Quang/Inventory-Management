@@ -1,5 +1,9 @@
 <div class="content">
-  <app-header title="Category" subtitle="Categories"></app-header>
+  <app-header
+    title="Category"
+    subtitle="Categories"
+    (refreshClicked)="refreshCategories()"
+  ></app-header>
   <p-card>
     <p-table [value]="pagedCategories" [tableStyle]="{'min-width': '60rem'}">
       <ng-template #header>
@@ -68,7 +72,7 @@
       </div>
       <div class="flex justify-content-around">
         <p-button label="Cancel" severity="secondary" (click)="visible = false" />
-        <p-button label="Save" (click)="visible = false" />
+        <p-button label="Save" (click)="visible = false" (onClick)="showSuccessToast()"/>
       </div>
     </p-dialog>
   </p-card>
