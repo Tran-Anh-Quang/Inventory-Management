@@ -27,10 +27,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: rgba(106, 112, 110, 0.98);
   }
 
   span {
     font-size: 0.75rem;
+    font-weight: normal;
+    color: rgba(106, 112, 110, 0.98);
   }
 
   &:hover {
