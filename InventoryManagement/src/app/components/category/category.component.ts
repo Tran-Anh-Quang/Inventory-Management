@@ -3,9 +3,13 @@ import {TableModule} from 'primeng/table';
 import {CategoryService} from '../../service/category.service';
 import {Card} from 'primeng/card';
 import {HeaderComponent} from '../header/header.component';
-import {ButtonDirective} from 'primeng/button';
+import {Button, ButtonDirective} from 'primeng/button';
 import {Tag} from 'primeng/tag';
 import {PaginatorComponent} from '../paginator/paginator.component';
+import {Dialog} from 'primeng/dialog';
+import {InputText} from 'primeng/inputtext';
+import {ToggleSwitch} from 'primeng/toggleswitch';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-category',
@@ -15,7 +19,12 @@ import {PaginatorComponent} from '../paginator/paginator.component';
     HeaderComponent,
     ButtonDirective,
     Tag,
-    PaginatorComponent
+    PaginatorComponent,
+    Dialog,
+    InputText,
+    Button,
+    ToggleSwitch,
+    FormsModule,
   ],
   templateUrl: './category.component.html',
   styleUrl: './category.component.css',
@@ -27,6 +36,8 @@ export class CategoryComponent implements OnInit{
   totalRecords: number = 0;
   rows: number = 10;
   first: number = 0;
+  visible: boolean = false;
+  statusChecked: boolean = false;
 
   constructor(private readonly categoriesService: CategoryService) {
   }
@@ -58,6 +69,10 @@ export class CategoryComponent implements OnInit{
     this.first = event.first;  // Get the starting index of the page
     this.rows = event.rows;    // Get the number of rows per page
     this.updatePagedCategories();  // Update the paginated data
+  }
+
+  showDialog() {
+    this.visible = true;
   }
 
 }

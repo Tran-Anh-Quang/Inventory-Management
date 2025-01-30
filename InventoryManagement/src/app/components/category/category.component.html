@@ -39,6 +39,7 @@
                 pButton
                 icon="pi pi-pencil"
                 class="p-button-outlined p-button-primary"
+                (click)="showDialog()"
               ></button>
               <button
                 pButton
@@ -56,5 +57,19 @@
       [totalRecords]="totalRecords"
       (pageChange)="onPageChange($event)"
     ></app-paginator>
+    <p-dialog header="Edit Category" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+      <div class="flex items-center gap-4 mb-4">
+        <label class="font-semibold w-24">Name</label>
+        <input pInputText id="categoryName" class="flex-auto" autocomplete="on"/>
+      </div>
+      <div class="flex items-center gap-4 mb-4">
+        <label class="font-semibold w-24">Status</label>
+        <p-toggleswitch [(ngModel)]="statusChecked" />
+      </div>
+      <div class="flex justify-content-around">
+        <p-button label="Cancel" severity="secondary" (click)="visible = false" />
+        <p-button label="Save" (click)="visible = false" />
+      </div>
+    </p-dialog>
   </p-card>
 </div>
