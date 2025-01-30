@@ -4,6 +4,7 @@ import {CategoryService} from '../../service/category.service';
 import {Card} from 'primeng/card';
 import {HeaderComponent} from '../header/header.component';
 import {ButtonDirective} from 'primeng/button';
+import {Tag} from 'primeng/tag';
 
 @Component({
   selector: 'app-category',
@@ -11,7 +12,8 @@ import {ButtonDirective} from 'primeng/button';
     TableModule,
     Card,
     HeaderComponent,
-    ButtonDirective
+    ButtonDirective,
+    Tag
   ],
   templateUrl: './category.component.html',
   styleUrl: './category.component.css',

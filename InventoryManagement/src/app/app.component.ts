@@ -11,7 +11,7 @@ import {MenuBarComponent} from './components/menu-bar/menu-bar.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
-  title = 'InventoryManagement';
+  title = 'Inventory Management';
 
   constructor(private primeng: PrimeNG) {}
 
