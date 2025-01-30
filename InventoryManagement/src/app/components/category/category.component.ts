@@ -3,13 +3,18 @@ import {TableModule} from 'primeng/table';
 import {CategoryService} from '../../service/category.service';
 import {Card} from 'primeng/card';
 import {HeaderComponent} from '../header/header.component';
+import {Button, ButtonDirective} from 'primeng/button';
+import {Tooltip} from 'primeng/tooltip';
 
 @Component({
   selector: 'app-category',
   imports: [
     TableModule,
     Card,
-    HeaderComponent
+    HeaderComponent,
+    Button,
+    Tooltip,
+    ButtonDirective
   ],
   templateUrl: './category.component.html',
   styleUrl: './category.component.css',
