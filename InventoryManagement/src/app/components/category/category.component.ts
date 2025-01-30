@@ -48,14 +48,12 @@ export class CategoryComponent implements OnInit{
     });
   }
 
-  // Cập nhật dữ liệu cho trang hiện tại
   updatePagedCategories(): void {
     const startIndex = this.first;
     const endIndex = this.first + this.rows;
     this.pagedCategories = this.categories.slice(startIndex, endIndex);
   }
 
-  // Xử lý sự kiện phân trang
   onPageChange(event: any): void {
     this.first = event.first;  // Get the starting index of the page
     this.rows = event.rows;    // Get the number of rows per page

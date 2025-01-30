@@ -1,8 +1,93 @@
-<p-drawer [(visible)]="visible" header="Welcome">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Profile</a></li>
-    <li><a href="#">Settings</a></li>
-  </ul>
+<!-- inventory-sidebar.component.html -->
+<p-drawer [(visible)]="visible" [style]="{ width: '280px' }">
+  <div class="inventory-menu">
+    <!-- Inventory Section -->
+    <div class="menu-section">
+      <h2 class="text-lg font-semibold mb-3">Inventory</h2>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-box"></i>
+        <span>Products</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-plus"></i>
+        <span>Create Product</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-clock"></i>
+        <span>Expired Products</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-chart-line"></i>
+        <span>Low Stocks</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-th-large"></i>
+        <span>Category</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-list"></i>
+        <span>Sub Category</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-tag"></i>
+        <span>Brands</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-calculator"></i>
+        <span>Units</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-sliders-h"></i>
+        <span>Variant Attributes</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-shield"></i>
+        <span>Warranties</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-barcode"></i>
+        <span>Print Barcode</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-qrcode"></i>
+        <span>Print QR Code</span>
+      </a>
+    </div>
+
+    <p-divider/>
+
+    <!-- Stock Section -->
+    <div class="menu-section mt-4">
+      <h2 class="text-lg font-semibold mb-3">Stock</h2>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-box"></i>
+        <span>Manage Stock</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-pencil"></i>
+        <span>Stock Adjustment</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <i class="pi pi-truck"></i>
+        <span>Stock Transfer</span>
+      </a>
+    </div>
+  </div>
 </p-drawer>
-<p-button (click)="visible = true" icon="pi pi-bars" />
+
+<p-button (click)="visible = true" icon="pi pi-bars"/>
