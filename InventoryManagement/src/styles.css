@@ -12,4 +12,25 @@ body {
   background-color: #f7faf7;
 }
 
+.content {
+  padding: 0 20px 24px;
+}
+
+p-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #28a745;
+  background-color: transparent;
+  color: #28a745;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.25rem 1rem;
+  height: auto;
+  text-transform: none;
+  box-shadow: none;
+}
+
+
+
 
